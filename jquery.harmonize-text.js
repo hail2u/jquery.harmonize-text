@@ -1,5 +1,5 @@
 /**
- * @preserve jQuery Plugin: Harmonize Text - version 0.1
+ * @preserve jQuery Plugin: Harmonize Text - version 0.1.1
  * http://github.com/hail2u/jquery.harmonize-text
  * Change font-size of selected elements to harmonize text with their parent element.
  *
@@ -14,27 +14,29 @@
       var target = $(this);
 
       var harmonizer = function () {
-        var fontSize = parseInt(target.css("font-size"), 10);
+        var fontSize = parseInt(target.css("font-size", "1px").css("font-size"), 10);
 
         var temp = $("<div/>").css({
           "display":     "none",
           "font-family": target.css("font-family"),
-          "font-size":   fontSize
+          "font-size":   fontSize + "px"
         }).text(target.text()).appendTo("body");
 
         var targetWidth = target.width();
         var tempWidth = temp.width();
 
-        while (tempWidth < targetWidth) {
-          fontSize *= (targetWidth / tempWidth);
-          temp.css("font-size", fontSize + "px");
-          tempWidth = temp.width();
-        }
+        if (tempWidth < targetWidth) {
+          while (tempWidth < targetWidth) {
+            fontSize *= (targetWidth / tempWidth);
+            temp.css("font-size", fontSize + "px");
+            tempWidth = temp.width();
+          }
 
-        while (tempWidth >= targetWidth) {
-          fontSize--;
-          temp.css("font-size", fontSize + "px");
-          tempWidth = temp.width();
+          while (tempWidth >= targetWidth) {
+            fontSize--;
+            temp.css("font-size", fontSize + "px");
+            tempWidth = temp.width();
+          }
         }
 
         target.css("font-size", fontSize + "px");
