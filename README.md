@@ -7,15 +7,29 @@ jQuery Plugin: Harmonize Text - version 0.1.1
 DESCRIPTION
 ===========
 
-Change font-size of selected elements to harmonize text with their parent element.
+Change font-size of selected elements to harmonize text with their
+parent element.
 
 
-Usage
+USAGE
 =====
 
-Harmonize all heading element:
+Harmonize all heading elements:
 
     $("h1, h2, h3, h4, h5, h6").harmonizeText();
+
+
+TIPS
+====
+
+Avoiding Vertical Scrollbar Problem
+-----------------------------------
+
+Use with following stylesheet code:
+
+    html {
+      overflow-y: scrol;
+    }
 
 
 LICENSE
