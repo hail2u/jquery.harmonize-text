@@ -1,7 +1,7 @@
 TITLE
 =====
 
-jQuery Plugin: Harmonize Text - version 0.1.1
+jQuery Plugin: Harmonize Text - version 0.2
 
 
 DESCRIPTION

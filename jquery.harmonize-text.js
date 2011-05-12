@@ -1,5 +1,5 @@
 /**
- * @preserve jQuery Plugin: Harmonize Text - version 0.1.1
+ * @preserve jQuery Plugin: Harmonize Text - version 0.2
  * http://github.com/hail2u/jquery.harmonize-text
  * Change font-size of selected elements to harmonize text with their parent element.
  *
