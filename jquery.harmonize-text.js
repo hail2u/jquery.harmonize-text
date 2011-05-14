@@ -1,5 +1,5 @@
 /**
- * @preserve jQuery Plugin: Harmonize Text - version 0.2
+ * @preserve jQuery Plugin: Harmonize Text - version 0.3
  * http://github.com/hail2u/jquery.harmonize-text
  * Change font-size of selected elements to harmonize text with their parent element.
  *
@@ -17,8 +17,8 @@
         var fontSize = parseInt(target.css("font-size", "1px").css("font-size"), 10);
 
         var temp = $("<div/>").css({
-          "display":     "none",
-          "font-size":   fontSize + "px",
+          "display":   "none",
+          "font-size": fontSize + "px",
           "border-collapse":    target.css("border-collapse"),
           "border-left-width":  target.css("border-left-width"),
           "border-right-width": target.css("border-right-width"),
@@ -60,9 +60,36 @@
 
       harmonizer();
 
-      $(window).resize(harmonizer);
+      $(window).delayesize(harmonizer);
     });
 
     return this;
+  };
+
+  // delayesize (delayed resize) event
+  $.fn.extend({
+    delayesize: function (fn) {
+      return fn ? this.bind("resize", delay(fn)) : this.trigger("delayesize");
+    }
+  });
+
+  var delay = function (fn) {
+    var timeout;
+
+    return function () {
+      var self = this;
+      var args = arguments;
+
+      function delayed () {
+        fn.apply(this, args);
+        timeout = null;
+      }
+
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+
+      timeout = setTimeout(delayed, 100);
+    };
   };
 })(jQuery);
