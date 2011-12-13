@@ -1,7 +1,7 @@
 TITLE
 =====
 
-jQuery Plugin: Harmonize Text - version 0.2
+jQuery Plugin: Harmonize Text - version 0.4
 
 
 DESCRIPTION
@@ -35,6 +35,4 @@ Use with following stylesheet code:
 LICENSE
 =======
 
-Copyright (c) 2011 Kyo Nagashima <kyo@hail2u.net>  
-This library licensed under MIT license:  
-http://opensource.org/licenses/mit-license.php
+MIT: http://hail2u.mit-license.org/2011
