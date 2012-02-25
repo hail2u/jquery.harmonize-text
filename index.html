@@ -5,14 +5,6 @@
 
     <title>Harmonize Text</title>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="https://github.com/hail2u/jquery.harmonize-text/raw/master/jquery.harmonize-text.js"></script>
-    <script>
-      $(window).load(function () {
-        $("h1, section p").harmonizeText();
-      });
-    </script>
-
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
     <style>
       html {
@@ -53,6 +45,8 @@
         margin: 0;
       }
     </style>
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   </head>
   <body>
     <header>
@@ -79,5 +73,13 @@
     <footer>
       <p>&copy; 2011 Kyo Nagashima</p>
     </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="jquery.harmonize-text.min.js"></script>
+    <script>
+      $(window).load(function () {
+        $("h1, section p").harmonizeText();
+      });
+    </script>
   </body>
 </html>
