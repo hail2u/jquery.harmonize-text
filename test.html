@@ -3,58 +3,83 @@
   <head>
     <meta charset="UTF-8">
 
-    <title>Test page for Harmonize Text</title>
+    <title>Harmonize Text</title>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="./jquery.harmonize-text.js"></script>
-    <script>
-      $(window).load(function () {
-        $(".line").harmonizeText();
-      });
-    </script>
-
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
     <style>
       html {
         overflow-y: scroll;
       }
 
       body {
-        font-family: "Palatino", "Palatino Linotype", serif;
+        color: black;
+        background-color: white;
+        font-family: "Baskerville", "Times New Roman", serif;
       }
 
-      h2 {
-	margin-top: 3em;
+      a {
+        color: Crimson;
       }
 
-      .line {
+      em {
+        color: OrangeRed;
+        font-style: italic;
+      }
+
+      header, section, footer {
+        margin: 0 auto;
+        padding: 64px 0;
+        max-width: 720px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-weight: normal;
+      }
+
+      section p {
         margin: 0;
-        line-height: 1;
+      }
+
+      footer p {
+        margin: 0;
       }
     </style>
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   </head>
-
   <body>
-    <h1>Test page for Harmonize Text</h1>
+    <header>
+      <h1>Harmonize Text</h1>
+    </header>
 
-    <h2>Works without Any Configuration</h2>
+    <section>
+      <p>This <a href="http://jquery.com/">jQuery</a> plugin</p>
+      <p>changes font size</p>
+      <p>of selected elements</p>
+      <p>to <em>harmonize</em> text</p>
+      <p>with their parent element</p>
+      <p>like this!</p>
+    </section>
 
-    <p class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <p class="line">Aliquam eget risus at purus suscipit sodales.</p>
-    <p class="line">Donec nibh diam, volutpat vel vehicula eu, ultrices nec est.</p>
-    <p class="line">Nulla facilisi.</p>
+    <section>
+      <p><em>Sweet</em>, isn't it?</p>
+    </section>
 
-    <h2>Works with Any Types of Child Nodes</h2>
+    <section>
+      <p>Download on <a href="https://github.com/hail2u/jquery.harmonize-text">GitHub</a></p>
+    </section>
 
-    <p class="line">Ut non enim <sup>nibh</sup>, eget porttitor quam.</p>
-    <p class="line">Cras porta <code>sapien</code> quam, eget interdum eros.</p>
-    <p class="line">Integer <strong>euismod</strong> iaculis feugiat.</p>
-    <p class="line">Mauris <em>scelerisque magna</em> dictum diam euismod ut hendrerit mi bibendum.</p>
+    <footer>
+      <p>&copy; 2011 Kyo Nagashima</p>
+    </footer>
 
-    <h2>Works with Any Style of Parent Element</h2>
-
-    <p class="line" style="font-weight: bold">Fusce vel sapien id eros mollis consequat quis ac nisi.</p>
-    <p class="line" style="font-variant: small-caps">Etiam ac lorem mauris, malesuada suscipit libero.</p>
-    <p class="line" style="letter-spacing: 20px">Donec a nulla odio.</p>
-    <p class="line" style="text-transform: uppercase">Mauris quis dui id orci blandit tempus.</p>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="jquery.harmonize-text.min.js"></script>
+    <script>
+      $(window).load(function () {
+        $("h1, section p").harmonizeText();
+      });
+    </script>
   </body>
 </html>
