@@ -1,5 +1,5 @@
 /**
- * @preserve jQuery Plugin: Harmonize Text - version 0.4
+ * @preserve jQuery Plugin: Harmonize Text - version 0.4.0
  *
  * LICENSE: http://hail2u.mit-license.org/2011
  */
