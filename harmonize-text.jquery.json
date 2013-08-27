@@ -1,0 +1,22 @@
+{
+  "name": "harmonize-text",
+  "version": "0.4.0",
+  "title": "Harmonize Text",
+  "author": {
+    "name": "Kyo Nagashima",
+    "url": "http://hail2u.net/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://hail2u.mit-license.org/2011"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.5"
+  },
+  "description": "Change font-size of selected elements to harmonize text with their parent element.",
+  "homepage": "https://github.com/hail2u/jquery.harmonize-text",
+  "demo": "http://hail2u.github.io/jquery.harmonize-text/",
+  "bugs": "https://github.com/hail2u/jquery.harmonize-text/issues"
+}
