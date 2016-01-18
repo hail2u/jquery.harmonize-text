@@ -22,7 +22,7 @@ Avoiding Vertical Scrollbar Problem
 Use with following stylesheet code:
 
     html {
-      overflow-y: scrol;
+      overflow-y: scroll;
     }
 
 
